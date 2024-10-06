@@ -9,6 +9,7 @@ const page = async () => {
   interface Meme {
     id: string;
     url: string;
+    box_count : number;
   }
   return (
     <>
@@ -29,10 +30,11 @@ const page = async () => {
         query: { 
           url : item.url,
           id : item.id,
+          box : item.box_count,
          },
       }}
     >
-      About
+      Generate Meme
     </Link>
               
               </button>
